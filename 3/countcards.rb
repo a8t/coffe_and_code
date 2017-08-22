@@ -7,24 +7,25 @@ def card_count(string_of_cards)
 
   string_of_cards.split("").each do |each_card|
 
-    if each_count[each_card] == nil   #if it's not yet in each_count,
-      each_count[each_card] = 1       #set count to 1
-    elsif each_count[each_card] == 4  #if count for this card is arleady 4, it's a cheat!
+    if each_count[each_card] == nil   # if it's not yet in each_count,
+      each_count[each_card] = 1       # set count to 1
+    elsif each_count[each_card] == 4  # if count for this card is arleady 4, it's a cheat!
       return false
-    else
-        each_count[each_card] += 1    #otherwise, increase the count by 1
+    else                              # otherwise (if it already is in the count but count < 4)
+        each_count[each_card] += 1    # increase the count by 1
     end
 
 
 
-    case each_card.to_i
-    when 0
+    case each_card.to_i               # convert each_card to integer, because:
+    when 0                            # string (e.g. T, J, Q, K, A) to_i == 0.
       count -= 1
     when 2..6
       count += 1
     else
       next
     end
+    
   end
 
   count
