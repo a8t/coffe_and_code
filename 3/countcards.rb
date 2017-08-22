@@ -3,7 +3,7 @@ CARDS_IN_A_DECK = 52
 def card_count(string_of_cards)
 
   count = 0
-  each_count = {}
+  # each_count = {}
 
   return false if string_of_cards.length > CARDS_IN_A_DECK
 
@@ -18,7 +18,7 @@ def card_count(string_of_cards)
     #   each_count[each_card] += 1      # increase the count by 1
     # end
 
-    return false if string_of_cards.count(each_card) > 4
+    return false if string_of_cards.count(each_card) > 4  # actually let's do it like this instead
 
 
     case each_card.to_i               # convert each_card to integer, because:
