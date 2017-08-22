@@ -5,7 +5,8 @@ def card_count(string_of_cards)
 
   return false if string_of_cards.length > 52
 
-  string_of_cards.split("").each do |each_card|
+  string_of_cards.split("").each do |each_card| # split string into an array of characters, e.g.
+                                                # "A3J4" -> ["A","3","J","4"]. Then iterate through.
 
     if each_count[each_card] == nil   # if it's not yet in each_count,
       each_count[each_card] = 1       # set count to 1
@@ -25,7 +26,7 @@ def card_count(string_of_cards)
     else
       next
     end
-    
+
   end
 
   count
