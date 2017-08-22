@@ -13,7 +13,7 @@ def card_count(string_of_cards)
     elsif each_count[each_card] == 4  # if count for this card is arleady 4, it's a cheat!
       return false
     else                              # otherwise (if it already is in the count but count < 4)
-        each_count[each_card] += 1    # increase the count by 1
+      each_count[each_card] += 1      # increase the count by 1
     end
 
 
