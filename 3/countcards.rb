@@ -41,3 +41,12 @@ puts card_count('K2T6AA')
 puts card_count('798TT23')
 puts card_count('235T2')
 puts card_count('KKT2KKK')
+
+2
+3
+4
+5
+6
+7
+8
+9
