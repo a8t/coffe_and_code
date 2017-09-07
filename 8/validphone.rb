@@ -1,5 +1,9 @@
 def valid_phone_number(string)
 
+  # if you're wondering:
+  # https://www.tutorialspoint.com/ruby/ruby_regular_expressions.htm
+  # http://regexr.com/
+
   /\([0-9]{3}\) [0-9]{3}\-[0-9]{4}/ === string
 
 end
