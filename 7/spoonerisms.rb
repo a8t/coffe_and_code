@@ -10,9 +10,9 @@ def spooner(sentence)
 
   not_stop_words = words_array.select {|each_word| each_word.length > 3 }
 
-  random_two = not_stop_words.sample(2)
-  index_of_first_word = words_array.index(random_two[0])
-  index_of_second_word = words_array.index(random_two[1])
+  random_two_not_stops = not_stop_words.sample(2)
+  index_of_first_word = words_array.index(random_two_not_stops[0])
+  index_of_second_word = words_array.index(random_two_not_stops[1])
 
   swapped_words = first_letter_swap(random_two)
 
@@ -37,5 +37,7 @@ def first_letter_swap(two_word_array)
   [new_first_word.downcase, new_second_word.downcase]
 
 end
+
+
 
 p spooner("You've wasted a whole term")
