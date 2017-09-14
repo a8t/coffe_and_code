@@ -58,17 +58,10 @@ function isReserved(ipString) {
   }
 }
 
-<<<<<<< HEAD
 console.log(isReserved("255.255.255.25"));
 console.log(isReserved("255.255.255.25.23"));
 console.log(isReserved("255.255.255.h"));
 console.log(isReserved("0.0.0.0/8"));
-=======
-console.log(ipCheck("255.255.255.25"));
-console.log(ipCheck("255.255.255.25.23"));
-console.log(ipCheck("255.255.255.h"));
-console.log(ipCheck("0.0.0.0/8"));
->>>>>>> 4e97684edd174c396bcb2ee1dd2299208cc36ca2
 console.log(isReserved("0.0.0.0/8"));
 console.log(isReserved("240.0.0.0/4"));
 console.log(isReserved("192.0.2.0/24"));
