@@ -18,18 +18,20 @@ def check_quotes(quoteString)
   even_number = quoteString.count('"') % 2 == 0
 
   if even_number
-    quoteString[quoteString.index('"')] = ''
+    # quoteString[quoteString.index('"')] = ''
+    #
+    # if quoteString.index('"')
+    #   if quoteString.index('\n') < quoteString.index('"')
+    #     return false
+    #   else
+    #     quoteString[quoteString.index('"')] = ''
+    #     quoteString[quoteString.index('\n')] = ''
+    #   end
+    # end
 
-    if quoteString.index('"')
-      if quoteString.index('\n') < quoteString.index('"')
-        return false
-      else
-        quoteString[quoteString.index('"')] = ''
-        quoteString[quoteString.index('\n')] = ''
-      end
+    quoteString.split('\n').each do | each_line |
+      return even_number
     end
-    
-    return true
 
   else
     false
