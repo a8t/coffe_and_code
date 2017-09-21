@@ -18,7 +18,9 @@ def check_quotes(quoteString)
   even_number = quoteString.count('"') % 2 == 0
 
   quoteString.split('\n').each do | each_line |
-    return even_number
+    if even_number == false
+      return false
+    end
   end
 
 
