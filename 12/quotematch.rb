@@ -17,30 +17,8 @@ def check_quotes(quoteString)
 
   even_number = quoteString.count('"') % 2 == 0
 
-  if even_number
-<<<<<<< HEAD
-    quoteString.split('\n').each do | each_line |
-      return even_number
-    end
-=======
-    # quoteString[quoteString.index('"')] = ''
-    #
-    # if quoteString.index('"')
-    #   if quoteString.index('\n') < quoteString.index('"')
-    #     return false
-    #   else
-    #     quoteString[quoteString.index('"')] = ''
-    #     quoteString[quoteString.index('\n')] = ''
-    #   end
-    # end
-
-    quoteString.split('\n').each do | each_line |
-      return even_number
-    end
-
->>>>>>> 61c82577ffbf847f2d3f17354b02d8aeed9be025
-  else
-    false
+  quoteString.split('\n').each do | each_line |
+    return even_number
   end
 
 
