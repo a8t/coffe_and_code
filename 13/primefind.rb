@@ -1,24 +1,23 @@
 def find_primes(max_bound)
     
-    range = (2..max_bound).to_a
+    range = (3..max_bound).to_a
 
-    range.select do |each_num|
-        is_prime?(each_num)
+    found_primes = [2]
+        
+    range.each do |each_num|
+        found_primes << each_num if found_primes_search(found_primes,each_num)
     end
 
+    found_primes
 end
 
-def is_prime?(num)
+def found_primes_search(found_primes_array, each_num)
+
+    found_primes_array.each do |each_found_prime|
+        return false if each_num % each_found_prime == 0
+    end
     
-    i = 2
-    while i ** 2 <= num
-        if num % i == 0
-            return false
-        end
-        i += 1
-    end
-
-    return true
+    true
 end
 
-puts find_primes(200000)
+puts find_primes(20000)
