@@ -5,14 +5,23 @@
 // Part 3
 // Given an array of arrays of words, like this: [["foo", "bar"], ["baz", "bat"]], reverse the order of both arrays, and the words within, ie. [["tab","zab"],["rab", "oof"]]
 
-const reverse = (array) => {
-    const length = array.length;
-    newArray = [];
-    for (var i = 0; i < length; i++){
-        (newArray.push(array.pop()))
-    }
+// const reverse = (array) => {
+//     const length = array.length;
+//     newArray = [];
+//     for (let i = 0; i < length; i++){
+//         (newArray.push(array.pop()))
+//     }
     
-    return newArray;
+//     return newArray;
+// }
+
+const reverse = (array) => {
+    for (let i = 0; i < array.length/2; i++){
+        let current = array[i];
+        array[i] = array[array.length-1-i];
+        array[array.length-1-i] = current;
+    }
+    return array
 }
 
 const wordsArrayReverse = (array) => {
@@ -27,7 +36,7 @@ const arrayOfArraysReverse = (array) => {
     )
 }
 
-console.log(reverse([5,3,6,8,3,10,9]))
+console.log(reverse([5,3,6,400,3,10,9]))
 
 console.log(wordsArrayReverse(["foo", "bar", "baz"]));
 
