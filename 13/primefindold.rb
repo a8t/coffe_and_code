@@ -21,4 +21,8 @@ def is_prime?(num)
     return true
 end
 
-puts find_primes(200000)
+start = Time.now
+find_primes(20000)
+finish = Time.now
+
+puts finish - start
